@@ -45,7 +45,7 @@ class ServicesAPI extends Controller
         request()->validate([
             'name' => 'required|max:255',
             'description' => 'required|max:255',
-//            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'price' => 'required|numeric',
             'notes' => 'nullable|string|max:255',
             'allergens' => 'nullable|string|max:255',
@@ -55,21 +55,6 @@ class ServicesAPI extends Controller
             'category_id' => 'required|numeric|exists:categories,id',
             'is_hidden' => 'nullable|boolean',
         ]);
-
-        // json to send to create this
-        // {
-        //     "name": "Service 1",
-        //     "description": "Service 1 description",
-        //     "price": 100,
-        //     "notes": "Service 1 notes",
-        //     "allergens": "Service 1 allergens",
-        //     "benefits": "Service 1 benefits",
-        //     "aftercare_tips": "Service 1 aftercare tips",
-        //     "cautions": "Service 1 cautions",
-        //     "category_id": 1,
-        //     "is_hidden": false
-        // }
-
 
         // slug
         $slug = \Str::slug( request('name'));
@@ -83,7 +68,7 @@ class ServicesAPI extends Controller
             'name' => request('name'),
             'slug' => $slug,
             'description' => request('description'),
-//            'image' => request('image'),  // image null
+            'image' => request('image'),
             'price' => request('price'),
             'notes' => request('notes'),
             'allergens' => request('allergens'),
@@ -102,8 +87,7 @@ class ServicesAPI extends Controller
 
         $service = Service::where('id', $id)->firstOrFail();
 
-        // validate
-
+        // validation
         $service->update([
             'name' => request('name'),
             'description' => request('description'),

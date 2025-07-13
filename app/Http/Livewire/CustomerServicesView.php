@@ -53,7 +53,14 @@ class CustomerServicesView extends Component
         // Determine whether to show category names in the URL or not
         $showCategoryNames = count($this->categoryFilter) <= 3;
 
-        $this->services = $query->orderBy($this->sortByPrice)->paginate(10);
+        // Apply sorting
+        if ($this->sortByPrice === 'PriceLowToHigh') {
+            $query->orderBy('price', 'asc');
+        } elseif ($this->sortByPrice === 'PriceHighToLow') {
+            $query->orderBy('price', 'desc');
+        }
+
+        $this->services = $query->paginate(10);
 
         return view('livewire.customer-services-view', [
             'services' => $this->services,

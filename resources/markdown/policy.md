@@ -1,8 +1,8 @@
 # Privacy Policy
 
-Privacy Policy - Salon Bliss
+Privacy Policy - Sunny Salon
 
-At Salon Bliss, we value and respect your privacy. This Privacy Policy outlines how we collect, use, and protect your personal information when you use our website.
+At Sunny Salon, we value and respect your privacy. This Privacy Policy outlines how we collect, use, and protect your personal information when you use our website.
 
 1. Information Collection
    1.1. We may collect personal information such as your name, email address, phone number, and other relevant details when you interact with our website or book appointments.

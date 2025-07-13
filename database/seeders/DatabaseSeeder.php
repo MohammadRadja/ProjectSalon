@@ -54,8 +54,8 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::create([
             'name' => 'Admin',
             'email' => 'admin@salonbliss.com',
-            'password' => Hash::make('adminpassword'),
-            'phone_number' => '1234569990',
+            'password' => Hash::make('admin123'),
+            'phone_number' => '1111',
             'role_id' => UserRolesEnum::Admin,
         ]);
 
@@ -63,24 +63,24 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::create([
             'name' => 'Customer 1',
             'email' => 'cust1@gmail.com',
-            'password' => Hash::make('custpassword'),
-            'phone_number' => '1299567890',
+            'password' => Hash::make('cust123'),
+            'phone_number' => '2222',
             'role_id' => UserRolesEnum::Customer,
         ]);
 
         \App\Models\User::create([
             'name' => 'Customer 2',
             'email' => 'cust2@gmail.com',
-            'password' => Hash::make('custpassword'),
-            'phone_number' => '1277567890',
+            'password' => Hash::make('cust123'),
+            'phone_number' => '3333',
             'role_id' => UserRolesEnum::Customer,
         ]);
 
         \App\Models\User::create([
             'name' => 'Customer 3',
             'email' => 'cust3@gmail.com',
-            'password' => Hash::make('custpassword'),
-            'phone_number' => '1234998890',
+            'password' => Hash::make('cust123'),
+            'phone_number' => '4444',
             'role_id' => UserRolesEnum::Customer,
         ]);
 
@@ -88,8 +88,8 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::create([
             'name' => 'Customer 4',
             'email' => 'cust4@gmail.com',
-            'password' => Hash::make('custpassword'),
-            'phone_number' => '2224262890',
+            'password' => Hash::make('cust123'),
+            'phone_number' => '5555',
             'role_id' => UserRolesEnum::Customer,
             'status' => '0',
         ]);
@@ -99,26 +99,26 @@ class DatabaseSeeder extends Seeder
         // create mock employees
         \App\Models\User::create([
             'name' => 'Employee 1',
-            'email' => 'emp1@salonbliss.com',
-            'password' => Hash::make('emppassword'),
-            'phone_number' => '1644567890',
+            'email' => 'emp1oyee1@salonbliss.com',
+            'password' => Hash::make('emp1oyee123'),
+            'phone_number' => '6666',
             'role_id' => UserRolesEnum::Employee,
         ]);
 
         \App\Models\User::create([
             'name' => 'Employee 2',
-            'email' => 'emp2@salonbliss.com',
-            'password' => Hash::make('emppassword'),
-            'phone_number' => '1234523890',
+            'email' => 'emp1oyee2@salonbliss.com',
+            'password' => Hash::make('emp1oyee123'),
+            'phone_number' => '7777',
             'role_id' => UserRolesEnum::Employee,
         ]);
 
         // this Employee is suspeneded
         \App\Models\User::create([
             'name' => 'Employee 3',
-            'email' => 'emp3@gmail.com',
-            'password' => Hash::make('emppassword'),
-            'phone_number' => '0034567890',
+            'email' => 'emp1oyee3@salonbliss.com',
+            'password' => Hash::make('emp1oyee123'),
+            'phone_number' => '8888',
             'role_id' => UserRolesEnum::Employee,
             'status' => '0',
         ]);

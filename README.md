@@ -1,16 +1,15 @@
-# Laravel based booking + CRM for Salon Bliss
+# Laravel based booking + CRM for Sunny Salon
 
 <p align="center"><img src="readme-assets/screenshots/logo-readme.png" width="400" alt="Laravel Logo"></p>
 
 # Table of contents
 
-- [About the project](#about-the-project)
-  - [Technologies Used](#technologies-used)
-  - [Project Document](#project-document)
-- [Features](#features)
-- [Using the queue](#using-the-queue)
-- [Installation](#installation)
-
+-   [About the project](#about-the-project)
+    -   [Technologies Used](#technologies-used)
+    -   [Project Document](#project-document)
+-   [Features](#features)
+-   [Using the queue](#using-the-queue)
+-   [Installation](#installation)
 
 ## About the project
 
@@ -20,7 +19,7 @@
 </figure>
 <br /><br />
 
-This project is a booking and CRM system for Salon Bliss, a fictional hair salon. 
+This project is a booking and CRM system for Sunny Salon, a fictional hair salon.
 
 Managing Users, Services, Locations, Cart for customers, Appointment Booking functionality, Multiple categories, locations for the salon, use of Email
 notifications, sending emails and capturing the views of the users,
@@ -29,11 +28,13 @@ appointment management, analytics data display are some of the features of this 
 If you want to run this project locally, follow the [installation instructions](#installation).
 
 ### Technologies Used
+
 The system is built with the [TALL Stack](https://tallstack.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Alpine.js](https://alpinejs.dev/) 
-- [Laravel](https://laravel.com/) 
-- [Livewire](https://laravel-livewire.com/)
+
+-   [Tailwind CSS](https://tailwindcss.com/)
+-   [Alpine.js](https://alpinejs.dev/)
+-   [Laravel](https://laravel.com/)
+-   [Livewire](https://laravel-livewire.com/)
 
 For authentication scaffolding the project uses [Laravel Jetstream](https://jetstream.laravel.com/).
 
@@ -52,13 +53,13 @@ The following are some of the features of the project. To provide a better under
 
 **✅ Use of middleware to grant role based access to routes**
 
-A middleware was created to validate the role of the user and grant access to the routes. 
+A middleware was created to validate the role of the user and grant access to the routes.
 When using the middleware the name of the required roles are passed seperated by a comma.
 The routes associated for the users based on the roles are grouped in the web.php file.
 
 **🏬 Location Management**
 
-The admin user can create, edit and delete locations. These locations are used when booking an appointment. 
+The admin user can create, edit and delete locations. These locations are used when booking an appointment.
 For the purpose of the assignment, only one appointment per time slot is possible in the system.
 
 <figure>
@@ -69,9 +70,8 @@ For the purpose of the assignment, only one appointment per time slot is possibl
 
 **👤User management**
 
-The management of the customers and employees is done by the admin user. 
+The management of the customers and employees is done by the admin user.
 Admin user can create, edit and delete employees. There is an option that allows the admin to suspend a user.
-
 
 <figure>
 <img src="readme-assets/screenshots/manage-users.png">
@@ -79,11 +79,10 @@ Admin user can create, edit and delete employees. There is an option that allows
 </figure>
 <br /><br />
 
-
 **💇 Categories and Service management**
 
-Admin and employee users can create, edit and delete service categories. 
-Admin and employee users can create, edit and delete services. When creating a service a category must be selected. 
+Admin and employee users can create, edit and delete service categories.
+Admin and employee users can create, edit and delete services. When creating a service a category must be selected.
 There are some other details such as the price, description, image, benefits, allegens, cautions, and aftercare tips.
 
 <figure>
@@ -100,7 +99,6 @@ This is done using a queued job. [Check out how to start the queue in laravel](#
 <figcaption align="center"><i>Queued jobs to send the new service email</i></figcaption>
 </figure>
 <br /><br />
-
 
 <figure>
 <img src="readme-assets/screenshots/new-service-email.png">
@@ -124,13 +122,13 @@ The system displays the timeslots of a location that are available when the user
 The system disables and greys out the unavailable time slots.
 
 _Take Note of the greyed out unavailable time slot below_
+
 <figure>
 <img src="readme-assets/screenshots/view-a-service.png">
 <figcaption align="center"><i>Viewing a service - Selecting Time Slots</i>
 </figcaption>
 </figure>
 <br /><br />
-
 
 **🛒 Cart**
 
@@ -216,49 +214,37 @@ A schedule for the current day and the day is shown for all the locations of the
 
 **🧑‍💻 API Customer CRUD and Services CRUD**
 
-The system provides an API for the create, read, update and delete of a customer. 
+The system provides an API for the create, read, update and delete of a customer.
 
 The system also provides an API for the create, read, update and delete of a service.
 
-The postman collection for the API is available here: [Salon Bliss.postman_collection.json](Salon Bliss.postman_collection.json)
+The postman collection for the API is available here: [Sunny Salon.postman_collection.json](Sunny Salon.postman_collection.json)
 
-[//]: # (## Screenshots)
-
-[//]: # (Below are some screenshots of the website.)
-
-[//]: # (<figure>)
-
-[//]: # (<img src="readme-assets/screenshots/homepage.png">)
-
-[//]: # (<figcaption align="center">Home Page</figcaption>)
-
-[//]: # ()
-[//]: # (</figure>)
-
-[//]: # ()
-[//]: # (<figure>)
-
-[//]: # (<figcaption align="center">Admin Dashboard Page</figcaption>)
-
-[//]: # (<img src="readme-assets/screenshots/dashboard.png">)
-
-[//]: # (</figure>)
-
-[//]: # ()
-[//]: # (<figure>)
-
-[//]: # (<figcaption align="center">Manage Deals Page</figcaption>)
-
-[//]: # (<img src="readme-assets/screenshots/manage-deals.png">)
-
-[//]: # ()
-[//]: # (</figure>)
+[//]: # "## Screenshots"
+[//]: # "Below are some screenshots of the website."
+[//]: # "<figure>"
+[//]: # '<img src="readme-assets/screenshots/homepage.png">'
+[//]: # '<figcaption align="center">Home Page</figcaption>'
+[//]: #
+[//]: # "</figure>"
+[//]: #
+[//]: # "<figure>"
+[//]: # '<figcaption align="center">Admin Dashboard Page</figcaption>'
+[//]: # '<img src="readme-assets/screenshots/dashboard.png">'
+[//]: # "</figure>"
+[//]: #
+[//]: # "<figure>"
+[//]: # '<figcaption align="center">Manage Deals Page</figcaption>'
+[//]: # '<img src="readme-assets/screenshots/manage-deals.png">'
+[//]: #
+[//]: # "</figure>"
 
 ## Using the queue
 
 The system utilizes queued jobs for tasks such as capturing page views and sending emails.
 
 To run the queue manually you will have to run the command
+
 ```shell
 php artisan queue:listen
 ```
@@ -303,8 +289,6 @@ For PHP and MySQL, [ XAMPP ](https://www.apachefriends.org/download.html) or [WA
 
 5.  Create a .env file by copying the .env.example file
 
-
-
 6.  Generate an app encryption key
 
     ```sh
@@ -316,6 +300,7 @@ For PHP and MySQL, [ XAMPP ](https://www.apachefriends.org/download.html) or [WA
     Follow instructions from Laravel docs if you are using SQLite. https://laravel.com/docs/10.x/database#sqlite-configuration
 
     Note: A sqlite database file is committed to the repository you can use it by configuring the env following instructions of the above link
+
 8.  Run the migrations
 
     ```sh
@@ -347,14 +332,14 @@ email : `admin@salonbliss.com`<br>
 password : `adminpassword`
 
 **Note**
-Make sure you set up an email service provider in the env file. For testing purposes a service like  [Mailtrap](https://mailtrap.io/) can be used.
+Make sure you set up an email service provider in the env file. For testing purposes a service like [Mailtrap](https://mailtrap.io/) can be used.
 
 For the email and page view capture to work, [the queue should be run](#using-the-queue)
 
 ## Future Development
+
 **This project was developed for an academic assignment, the project will be further developed in the future as a portfolio project**
 
 If you have any suggestions create an issue on the repository.
-
 
 ![CatComputerGIF](https://github.com/sachintha-lk/CRM-laravel/assets/68807141/194f3a88-16b8-421f-9c5e-c076e56f8bdd)
