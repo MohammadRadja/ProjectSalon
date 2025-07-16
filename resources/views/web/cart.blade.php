@@ -42,8 +42,7 @@
                                         <tr>
                                             <td class="py-4">
                                                 <div class="flex items-center">
-                                                    <img class="h-16 w-16 mr-4"
-                                                        src="{{ '/storage/' . $service->image }}"
+                                                    <img class="h-16 w-16 mr-4" src="{{ asset($service->image) }}"
                                                         alt="{{ $service->name . ' image' }}">
                                                     <span class="font-semibold"> {{ $service->name }}</span>
                                                 </div>

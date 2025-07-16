@@ -203,11 +203,11 @@
                 {{ __('Home') }}
             </x-responsive-nav-link>
 
-            <x-responsive-nav-link href="#">
+            <x-responsive-nav-link href="{{ route('services') }}">
                 {{ __('Services') }}
             </x-responsive-nav-link>
 
-            <x-responsive-nav-link href="#">
+            <x-responsive-nav-link href="{{ route('deals') }}">
                 {{ __('Deals') }}
             </x-responsive-nav-link>
 

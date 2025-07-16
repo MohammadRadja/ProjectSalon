@@ -61,7 +61,7 @@
                         </th>
                         <td class="px-6 py-4  max-w-0">
                             <div class="font-medium text-gray-700">
-                                <img src="{{ asset('storage/' . $service->image) }}" alt=""
+                                <img src="{{ asset('images/services/' . $service->image) }}" alt=""
                                     class="w-20 h-20 object-cover">
                             </div>
                         </td>
@@ -270,7 +270,8 @@
 
                         {{-- If the image is already saved is system show img --}}
                         @if (isset($image) && is_string($image))
-                            <img alt="image" src="{{ '/storage/' . $image }}" class="mt-4" width="200">
+                            <img alt="image" src="{{ asset('images/' . $image) }}" class="mt-4"
+                                width="200">
                             {{-- When the image is uploaded show img --}}
                         @elseif (isset($image) && is_object($image))
                             <img alt="image" src="{{ $image->temporaryUrl() }}" class="mt-4" width="200">
