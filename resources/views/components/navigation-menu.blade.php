@@ -45,9 +45,11 @@
 
                     <!-- Auth Navigation Links -->
                     @auth
-                    <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
+                    @if($userRole != 'Customer')
+                        <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('Dashboard') }}
+                        </x-nav-link>
+                    @endif
                     @else
                     <x-nav-link href="{{ route('login') }}" :active="request()->routeIs('login')">
                         {{ __('Login') }}
@@ -215,14 +217,34 @@
 
             @auth
             @if($userRole == 'Admin')
-            <x-responsive-nav-link href="{{ route('manageusers') }}" :active="request()->routeIs('manageusers')">
-                {{ __('Manage Users') }}
-            </x-responsive-nav-link>
-            @endif
-
             <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+
+             <x-responsive-nav-link href="{{ route('manageusers') }}" :active="request()->routeIs('manageusers')">
+                {{ __('Manage Users') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link href="{{ route('managelocations') }}" :active="request()->routeIs('managelocations')">
+                {{ __('Manage Locations') }}
+            </x-responsive-nav-link>
+
+             <x-responsive-nav-link href="{{ route('manageappointments') }}" :active="request()->routeIs('manageappointments')">
+                {{ __('Manage Appointments') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link href="{{ route('manageservices') }}" :active="request()->routeIs('manageservices')">
+                {{ __('Manage Services') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link href="{{ route('managecategories') }}" :active="request()->routeIs('managecategories')">
+                {{ __('Manage Categories') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link href="{{ route('managedeals') }}" :active="request()->routeIs('managedeals')">
+                {{ __('Manage Deals') }}
+            </x-responsive-nav-link>
+            @endif
 
             @else
             <x-responsive-nav-link href="{{ route('login') }}" :active="request()->routeIs('login')">

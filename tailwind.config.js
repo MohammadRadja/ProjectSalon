@@ -15,12 +15,20 @@ module.exports = {
                 // sans: ["Figtree", ...defaultTheme.fontFamily.sans],
                 sans: ["K2D", ...defaultTheme.fontFamily.sans],
             },
+            screens: {
+                "max-sm": { max: "639px" },
+                sm: "640px",
+                md: "768px",
+                lg: "1024px",
+                xl: "1280px",
+                "2xl": "1536px",
+            },
         },
     },
 
     plugins: [
         require("@tailwindcss/forms"),
         require("@tailwindcss/typography"),
-        require('@tailwindcss/aspect-ratio'),
+        require("@tailwindcss/aspect-ratio"),
     ],
 };
